@@ -1,0 +1,3 @@
+#### Requirements wih specifier version ####
+joblib==1.0.1
+streamlit==1.5.0
