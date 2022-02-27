@@ -23,17 +23,14 @@ predicted = model.predict([[
     length_petal, 
     width_petal]])[0]
 
+col3.markdown(f"""<h5 style='text-align: center;'>{predicted}</h5>""", unsafe_allow_html=True)
 
-try:
-    col3.markdown(f"""<h5 style='text-align: center;'>{predicted}</h5>""", unsafe_allow_html=True)
-    if predicted == "Iris-setosa":
-        col3.image('images/setosa.png')
-    elif predicted == "Iris-versicolor":
-        col3.image('images/versicolor.png')
-    elif predicted == "Iris-virginica":
-        col3.image('images/virginica.png')
-except:
-    col3.write('Enter values')
+if predicted == "Iris-setosa":
+    col3.image('images/setosa.png')
+elif predicted == "Iris-versicolor":
+    col3.image('images/versicolor.png')
+elif predicted == "Iris-virginica":
+    col3.image('images/virginica.png')
 
 """---
 Created by Cesar Supo
